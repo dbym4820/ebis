@@ -5,6 +5,8 @@
 @section('header')
     <p>現在の投稿<span>{{ $users->count() }}</span>件</p>
     <h2><a href="{{ url('/create') }}">投稿する</a></h2>
+    <div id="threadcard"></div>
+    <div id="example"></div>
 @endsection
 
 @section('content')
@@ -17,7 +19,7 @@
 		</dt>
 		<dd>
 		    {!! nl2br(e($user->body)) !!}
-		    <a href="{{ action('PagesController@confirm', $user->id) }}">削除</a>
+		    <a href="{{ action('UserpageController@confirm', $user->id) }}">削除</a>
 		</dd>
 	    </div><!-- posts -->
 	@empty

@@ -15,9 +15,9 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-	    $table->unsignedInteger('post_id');
-	    $table->string('contributor');
-	    $table->text('post_content');
+            $table->unsignedInteger('post_id');
+            $table->string('contributor');
+            $table->text('post_content');
             $table->timestamps();
         });
     }

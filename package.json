@@ -20,5 +20,10 @@
         "popper.js": "^1.12",
         "react": "^16.2.0",
         "react-dom": "^16.2.0"
+    },
+    "dependencies": {
+        "ajv": "^6.5.3",
+        "browserify": "^16.2.2",
+        "imagemin": "^5.3.1"
     }
 }

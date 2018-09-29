@@ -15,6 +15,10 @@
             <span class="error">{{ $errors->first('password') }}</span>
         @endif
         <p>
+            <input type="mail" name="mail" placeholder="enter email address">
+        </p>
+
+        <p>
             <textarea name="body" rows="8" cols="40" value="{{ old('body') }}" placeholder="enter comment"></textarea>
         </p>
         @if ($errors->has('body'))

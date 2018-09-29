@@ -3,21 +3,20 @@
 @section('title', '削除画面')
 
 @section('content')
-    <h1>本当にこの記事を削除しますか？</h1>
+    <h1>本当にこのスレッドを削除しますか？</h1>
     <dl>
         <dt>
-            <span>1</span><span>名前：{{ $user->name }}</span>
-            <span>{{ $user->created_at }}</span><br>
+            <span>1</span><span>名前：{{ $thread->user_id }}</span>
+            <span>{{ $thread->created_at }}</span><br>
         </dt>
         <dd>
-            {{ $user->body }}
+            {{ $thread->title }}
         </dd>
     </dl>
-    <form action="{{ url('/delete') }}" method="post">
+    <form action="{{ url('/thread-delete') }}" method="post">
         {{ csrf_field() }}
             <p>
-                <input type="password" name="password" placeholder="enter password">
-                <input type="hidden" name="id" value="{{ $user->id }}">
+                <input type="hidden" name="id" value="{{ $thread->id }}">
             </p>
             <p>
                 @if (isset($error))

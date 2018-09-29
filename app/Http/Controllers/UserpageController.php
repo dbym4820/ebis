@@ -13,6 +13,6 @@ class UserpageController extends Controller
     }
 
     public function confirm(User $user) {
-        return view('confirm', ['user' => $user]);
+        return view('confirm')->with('user', $user);
     }
 }

@@ -1,10 +1,10 @@
-<!DOCTYPE>
-<html lang="ja">
-  <head>
-  </head>
-  <body>
-    <h1>EBIS BBS environment</h1>
+@extends('layouts.default')
+
+@section('title', 'ダッシュボード')
+
+@section('content')
     <p><a href="/users">ユーザ一覧</a></p>
-  </body>
-</html>
+    <p><a href="/threads">スレッド一覧</a></p>
+@endsection
+
 
