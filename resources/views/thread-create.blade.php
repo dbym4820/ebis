@@ -3,7 +3,7 @@
 @section('title', '新スレッド申請')
 
 @section('content')
-    <form action="{{ url('/thread-save') }}" method="post">
+    <form action="{{ url('/thread-save', '', $is_production) }}" method="post">
     {{ csrf_field() }}
         <p>
             <input type="text" name="thread_title" value="{{ old('thread_title') }}" id="thread_title" placeholder="enter thread name">

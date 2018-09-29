@@ -13,7 +13,7 @@
             {{ $user->body }}
         </dd>
     </dl>
-    <form action="{{ url('/delete') }}" method="post">
+    <form action="{{ url('/delete', '', $is_production) }}" method="post">
         {{ csrf_field() }}
             <p>
                 <input type="password" name="password" placeholder="enter password">
