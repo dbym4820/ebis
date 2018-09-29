@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<script type="text/javascript" src="{{{ asset('js/jquery.js') }}}"></script>
-	<script src="{{ url('/js/app.js', '', $is_production)}}"></script>
-	<link href="{{ url('/css/app.css', '', $is_production) }}" rel="stylesheet">
+	<script src="{{ asset('js/app.js', $is_production)}}"></script>
+	<link href="{{ asset('css/app.css', $is_production) }}" rel="stylesheet">
 	<link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
