@@ -19,6 +19,11 @@ class AppServiceProvider extends ServiceProvider
             \URL::forceScheme('https');
         }
 
+        // https
+        $is_production = env('APP_ENV') === 'production' ? true : false;
+        View::share('is_production',$is_production);
+    }
+
     /**
      * Register any application services.
      *
