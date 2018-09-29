@@ -4,7 +4,7 @@
 
 @section('header')
     <p>現在の投稿<span>{{ $users->count() }}</span>件</p>
-    <h2><a href="{{ url('/create') }}">投稿する</a></h2>
+    <h2><a href="{{ url('/create', '', $is_production) }}">投稿する</a></h2>
     <div id="threadcard"></div>
     <div id="example"></div>
 @endsection

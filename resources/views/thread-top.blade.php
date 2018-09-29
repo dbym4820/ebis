@@ -3,7 +3,7 @@
 @section('title', 'スレッド一覧')
 
 @section('header')
-    <h2><a href="{{ url('/thread-create') }}">新規スレッドを作成</a></h2>
+    <h2><a href="{{ url('/thread-create', '', $is_production) }}">新規スレッドを作成</a></h2>
     <div id="example"></div>
 @endsection
     

@@ -3,7 +3,7 @@
 @section('title', '新規投稿')
 
 @section('content')
-    <form action="{{ url('/posts') }}" method="post">
+    <form action="{{ url('/posts', '', $is_production) }}" method="post">
     {{ csrf_field() }}
         <p>
             <input type="text" name="name" value="{{ old('name') }}" id="name" placeholder="enter name">

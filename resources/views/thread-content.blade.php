@@ -3,7 +3,7 @@
 @section('title', 'レス一覧')
 
 @section('header')
-    <h2><a href="{{ url('/thread-create') }}">新規書き込み</a></h2>
+    <h2><a href="{{ url('/thread-create', '', $is_production) }}">新規書き込み</a></h2>
 @endsection
     
 @section('content')

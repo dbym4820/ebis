@@ -13,7 +13,7 @@
             {{ $thread->title }}
         </dd>
     </dl>
-    <form action="{{ url('/thread-delete') }}" method="post">
+    <form action="{{ url('/thread-delete', '', $is_production) }}" method="post">
         {{ csrf_field() }}
             <p>
                 <input type="hidden" name="id" value="{{ $thread->id }}">
