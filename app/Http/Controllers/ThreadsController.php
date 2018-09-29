@@ -22,7 +22,7 @@ class ThreadsController extends Controller
     public function save(ThreadsRequest $request) {
         $thread = new Thread();
         $thread->title = $request->thread_title;
-        //$thread->user_id = 1;
+        $thread->user_id = 1;
         $thread->category_id = 100;
         $thread->save();
         return redirect('/');
@@ -40,9 +40,11 @@ class ThreadsController extends Controller
 
     public function content(Request $request) {
         $thread_id = $request->thread_id;
+        $thread_title = $request->thread_title;
         $threads = Thread::latest()->get();
         return view('thread-content')->with([
             'threads' => $threads,
-            'thread_id' => $thread_id]);
+            'thread_id' => $thread_id,
+            'thread_title' => $thread_title]);
     }
 }
