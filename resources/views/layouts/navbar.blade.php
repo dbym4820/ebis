@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <!-- ブランド表示 -->
-      <a class="navbar-brand" href="">{{ config('app.name', 'ttt') }}</a>
+      <a class="navbar-brand" href="/">{{ config('app.name', 'ttt') }}</a>
  
     <!-- スマホやタブレットで表示した時のメニューボタン -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

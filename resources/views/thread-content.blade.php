@@ -14,7 +14,7 @@
           <div id="card"></div>
 		</dt>
 		<dd>
-            <a href="/thread/{!! nl2br(e($thread->id)) !!}">{!! nl2br(e($thread->title)) !!}</a>
+            <a href="/thread/{!! nl2br(e($thread->id)) !!}">{!! nl2br(e($thread->id)) !!}</a>
 		    <a href="{{ action('ThreadsController@confirm', $thread->id) }}">削除</a>
 		</dd>
 	    </div><!-- posts -->
